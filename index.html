@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='./style/style.css'>
+    <link rel='stylesheet' href='./style/768px.css'>
+    <link rel='stylesheet' href='./style/568px.css'>
+    <link rel='stylesheet' href='./style/484px.css'>
+    <link rel='stylesheet' href='./style/384px.css'>
+    <title>TodoSync</title>
+    <script src='js/main.js'></script>
+</head>
+
+<body>
+    <div class='alertBox' id='alertBox'></div>
+    <div class='container'>
+        <div class='divOne'></div>
+        <div class='divTwo'></div>
+        <div class='divTodo'>
+            <div class='divTitle'>
+                <h1 id='headTitle'>T O D O&nbsp&nbspS Y N C</h1>
+                <!-- <img class='menuIcon' src="menuIcon.png" alt="menuIcon_img"> -->
+            </div>
+            <div class='divInput'>
+                <button id='buttonInput' onclick='backArrowFunction();'>+</button>
+            </div>
+            <div class='divTaskList'>
+                <ul class='listTaskList scrollable-div'>
+                    <!-- <li class='task'>
+                        <div class='subDivListOne'>
+                            <div class='taskPartOne'>
+                                <input class='checkTask' type='checkbox'>
+                                <h3 class='todoTaskHead'>Complete a Todo Website</h3>
+                            </div>
+                            <div class='taskPartTwo'>
+                                <img src='downArrow.svg' class='downArrowStyle' id='downArrowStyle'
+                                    onclick="taskDetailOpener();" alt='downArrow_svg'>
+                            </div>
+                        </div>
+                        <div class='todoTaskInfo'>
+                            <div class="priorityTask">Priority: High</div>
+                            <div class="statusTask">Status: Complete</div>
+                            <div class="dateTask">Due by: 2/10/2023</div>
+                            <img src="editSymbol.png" alt="editSymbol" class='editSymbolStyle'>
+                        </div>
+                    </li> -->
+                    <!-- <form class='TaskForm'>
+                        <input type="text" class="TaskName taskInputForm" id='TaskName' placeholder='Task Name'>
+                        <select class="TaskPriority taskInputForm" id='TaskPriority'>
+                            <option value="Low" class="optionPriority">Priority</option>
+                            <option value="Low" class="optionPriority">Low</option>
+                            <option value="Medium" class="optionPriority">Medium</option>
+                            <option value="High" class="optionPriority">High</option>
+                        </select>
+                        <select class="TaskPriority taskInputForm" id='TaskStatus'>
+                            <option value="Incomplete" class="optionPriority">Incomplete</option>
+                            <option value="Complete" class="optionPriority">Complete</option>
+                        </select>
+                        <input type="date" class='TaskDate' name='TaskDate' id='TaskDate'>
+                        <button class='AddTaskButton' onclick='insertTask();'>Add</button> 
+                    </form> -->
+                </ul>
+            </div>
+            <div class='divfilterMenu'>
+                <div class='filterOne'>
+                    <div id='taskCount'></div>
+                </div>
+                <select class="filterTwo" id='filterTwo' onchange="handleFilterChange(this.value)">
+                    <option class="optionsFilterTwo">Filter</option>
+                    <option class="optionsFilterTwo" id="AllEventListener">All</option>
+                    <option class="optionsFilterTwo">To do</option>
+                    <option class="optionsFilterTwo">In progress</option>
+                    <option class="optionsFilterTwo">Done</option>
+                    <option class="optionsFilterTwo">High to Low</option>
+                    <option class="optionsFilterTwo">Low to High</option>
+                </select>
+                <div class='filterThree glowHover' onclick="clearAll();">Clear All</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

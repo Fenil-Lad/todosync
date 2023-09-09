@@ -1,0 +1,20 @@
+const backArrowFunction = (beforePage, afterPage) => {
+    const backElement = document.getElementById('buttonInput');
+    if (backElement.innerHTML == '+') {
+        backElement.innerHTML = '<img class="backArrow" id="backArrow" src="backArrow.png">';
+        // let BeforePage = renderDetailsOfTask();
+        beforePage();
+        preventUserClick('.filterTwo');
+        preventUserClick('.filterThree');
+    }
+    else if (backElement.innerHTML == '<img class="backArrow" id="backArrow" src="backArrow.png">') {
+        backElement.innerHTML = '+';
+        // let AfterPage = renderTasks();
+        afterPage();
+        // renderLastSection(2);
+        allowUserClick('.filterTwo');
+        allowUserClick('.filterThree');
+    }
+}
+
+        backArrowFunction(renderDetailsOfTask, renderTasks);
